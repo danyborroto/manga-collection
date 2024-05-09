@@ -9,7 +9,7 @@
    <children>
       <HBox layoutX="-32.0" layoutY="64.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox fx:id="leftMenu" prefHeight="400.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+            <VBox fx:id="leftMenu" prefHeight="400.0" prefWidth="0.0" stylesheets="@../resources/style.css" HBox.hgrow="ALWAYS">
                <children>
                   <Button fx:id="mangaBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMangaView" prefHeight="36.0" prefWidth="126.0" text="Manga" />
                   <Button fx:id="genreBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGenreView" prefHeight="36.0" prefWidth="126.0" text="Genre" />

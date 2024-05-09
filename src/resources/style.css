@@ -1,0 +1,15 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 9, 2024, 3:33:10 PM
+    Author     : Lily
+*/
+.button{
+    -fx-background-color: transparent;
+}
+.button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: rgba(128, 128, 128, 0.2);
+}
