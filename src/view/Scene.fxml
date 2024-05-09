@@ -5,21 +5,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SceneController">
    <children>
       <HBox layoutX="-32.0" layoutY="64.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox fx:id="leftMenu" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="leftMenu" prefHeight="400.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button fx:id="mangaBTN" mnemonicParsing="false" onAction="#onMangaView" prefHeight="36.0" prefWidth="112.0" text="Manga" />
-                  <Button fx:id="genereBTN" mnemonicParsing="false" onAction="#onGenereView" prefHeight="36.0" prefWidth="123.0" text="Genere" />
-                  <Button fx:id="authorBTN" mnemonicParsing="false" onAction="#onAuthorView" prefHeight="36.0" prefWidth="188.0" text="Author" />
-                  <Button fx:id="serieBTN" mnemonicParsing="false" onAction="#onSerieView" prefHeight="36.0" prefWidth="122.0" text="Serie" />
-                  <Button fx:id="settingBTN" mnemonicParsing="false" onAction="#onSettingView" prefHeight="36.0" prefWidth="126.0" text="Settings" />
+                  <Button fx:id="mangaBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMangaView" prefHeight="36.0" prefWidth="126.0" text="Manga" />
+                  <Button fx:id="genreBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGenreView" prefHeight="36.0" prefWidth="126.0" text="Genre" />
+                  <Button fx:id="authorBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAuthorView" prefHeight="36.0" prefWidth="126.0" text="Author" />
+                  <Button fx:id="serieBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSerieView" prefHeight="36.0" prefWidth="126.0" text="Serie" />
+                  <Button fx:id="settingBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSettingView" prefHeight="36.0" prefWidth="126.0" text="Settings" />
                </children>
             </VBox>
-            <AnchorPane fx:id="rightPane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane fx:id="rightPane" prefHeight="400.0" prefWidth="489.0" HBox.hgrow="SOMETIMES" />
          </children>
       </HBox>
    </children>

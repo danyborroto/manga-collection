@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author Lily
  */
-public class GenereController implements Initializable {
+public class GenreController implements Initializable {
 
     /**
      * Initializes the controller class.

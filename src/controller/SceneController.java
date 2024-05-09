@@ -58,9 +58,9 @@ public class SceneController implements Initializable {
     }
 
     @FXML
-    private void onGenereView(ActionEvent event) {
+    private void onGenreView(ActionEvent event) {
         try {
-            changeFXML("/view/Genere.fxml");
+            changeFXML("/view/Genre.fxml");
         } catch (IOException ex) {
             Logger.getLogger(SceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
