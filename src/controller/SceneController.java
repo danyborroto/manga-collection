@@ -14,9 +14,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -32,13 +36,19 @@ public class SceneController implements Initializable {
     @FXML
     private Button mangaBTN;
     @FXML
-    private Button genereBTN;
-    @FXML
     private Button authorBTN;
     @FXML
     private Button serieBTN;
     @FXML
     private Button settingBTN;
+    @FXML
+    private Button newBTN;
+    @FXML
+    private Button openBTN;
+    @FXML
+    private Button genreBTN;
+    
+    private Stage stage;
 
     /**
      * Initializes the controller class.
@@ -46,7 +56,7 @@ public class SceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void onMangaView(ActionEvent event) {
@@ -87,20 +97,38 @@ public class SceneController implements Initializable {
     @FXML
     private void onSettingView(ActionEvent event) {
         try {
-            changeFXML("/view/Setting.fxml");
+            //changeFXML("/view/Setting.fxml");
+            Stage modalStage = new Stage();
+            modalStage.initModality(Modality.APPLICATION_MODAL);
+            modalStage.initOwner(settingBTN.getScene().getWindow());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Setting.fxml"));
+            Parent root = loader.load();
+            Scene modalScene = new Scene(root);
+            modalStage.setScene(modalScene);
+
+// Mostrar ventana modal
+            modalStage.showAndWait();
         } catch (IOException ex) {
             Logger.getLogger(SceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
- 
-    private void changeFXML(String fxml) throws IOException{
+
+    private void changeFXML(String fxml) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
         AnchorPane panel = loader.load();
-        
+
         AnchorPane.setBottomAnchor(panel, Double.valueOf(0));
         AnchorPane.setLeftAnchor(panel, Double.valueOf(0));
         AnchorPane.setRightAnchor(panel, Double.valueOf(0));
         AnchorPane.setTopAnchor(panel, Double.valueOf(0));
         rightPane.getChildren().setAll(panel);
+    }
+
+    @FXML
+    private void onNewProject(ActionEvent event) {
+    }
+
+    @FXML
+    private void onOpenProject(ActionEvent event) {
     }
 }

@@ -1,11 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
    <children>
-      <Label layoutX="260.0" layoutY="183.0" text="Setting" />
+      <VBox prefHeight="400.0" prefWidth="301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="89.0">
+                     <children>
+                        <Label text="Reader:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <TextField fx:id="readerTXT" prefHeight="26.0" prefWidth="137.0" />
+                  <Button fx:id="readerBTN" mnemonicParsing="false" text="..." />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="89.0">
+                     <children>
+                        <Label text="View type:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <ComboBox fx:id="viewTypeCombo" prefHeight="26.0" prefWidth="98.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="89.0">
+                     <children>
+                        <Label text="Content:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <ComboBox fx:id="contentCombo" prefHeight="26.0" prefWidth="98.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="88.0" prefHeight="39.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="89.0">
+                     <children>
+                        <Label text="List items:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <TextField fx:id="numberItemsTXT" prefHeight="26.0" prefWidth="44.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="178.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="89.0">
+                     <children>
+                        <Label text="Paths:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="46.0" prefWidth="154.0">
+                           <children>
+                              <TextField fx:id="pathTXT" />
+                              <ListView fx:id="pathList" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="178.0" prefWidth="44.0">
+                           <children>
+                              <Button fx:id="plusBTN" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0" text="+" />
+                              <Button fx:id="minusBTN" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0" text="-" />
+                           </children>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
