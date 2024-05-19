@@ -6,7 +6,11 @@ package view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -14,6 +18,13 @@ import javafx.fxml.Initializable;
  * @author Lily
  */
 public class TagController implements Initializable {
+
+    @FXML
+    private TextField searchTXT;
+    @FXML
+    private Button addBTN;
+    @FXML
+    private TableView<?> tagTable;
 
     /**
      * Initializes the controller class.

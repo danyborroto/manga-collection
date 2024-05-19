@@ -7,13 +7,10 @@ package view;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +18,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * FXML Controller class
@@ -30,11 +29,15 @@ import javafx.stage.Stage;
 public class SceneController implements Initializable {
 
     @FXML
+    private Button newBTN;
+    @FXML
+    private Button openBTN;
+    @FXML
     private VBox leftMenu;
     @FXML
-    private AnchorPane rightPane;
-    @FXML
     private Button mangaBTN;
+    @FXML
+    private Button tagBTN;
     @FXML
     private Button authorBTN;
     @FXML
@@ -42,13 +45,7 @@ public class SceneController implements Initializable {
     @FXML
     private Button settingBTN;
     @FXML
-    private Button newBTN;
-    @FXML
-    private Button openBTN;
-    
-    private Stage stage;
-    @FXML
-    private Button tagBTN;
+    private AnchorPane rightPane;
 
     /**
      * Initializes the controller class.
@@ -56,6 +53,14 @@ public class SceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }    
+
+    @FXML
+    private void onNewProject(ActionEvent event) {
+    }
+
+    @FXML
+    private void onOpenProject(ActionEvent event) {
     }
 
     @FXML
@@ -67,9 +72,10 @@ public class SceneController implements Initializable {
         }
     }
 
-    private void onGenreView(ActionEvent event) {
+    @FXML
+    private void onTagView(ActionEvent event) {
         try {
-            changeFXML("/view/Genre.fxml");
+            changeFXML("/view/Tag.fxml");
         } catch (IOException ex) {
             Logger.getLogger(SceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -105,13 +111,13 @@ public class SceneController implements Initializable {
             Scene modalScene = new Scene(root);
             modalStage.setScene(modalScene);
 
-// Mostrar ventana modal
+            // Mostrar ventana modal
             modalStage.showAndWait();
         } catch (IOException ex) {
             Logger.getLogger(SceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
     private void changeFXML(String fxml) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
         AnchorPane panel = loader.load();
@@ -121,17 +127,5 @@ public class SceneController implements Initializable {
         AnchorPane.setRightAnchor(panel, Double.valueOf(0));
         AnchorPane.setTopAnchor(panel, Double.valueOf(0));
         rightPane.getChildren().setAll(panel);
-    }
-
-    @FXML
-    private void onNewProject(ActionEvent event) {
-    }
-
-    @FXML
-    private void onOpenProject(ActionEvent event) {
-    }
-
-    @FXML
-    private void onTagView(ActionEvent event) {
     }
 }
