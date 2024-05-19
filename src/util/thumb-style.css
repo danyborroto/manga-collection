@@ -1,0 +1,31 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 19, 2024, 4:37:57 PM
+    Author     : Daniel
+*/
+
+.check-box:selected > .box {
+    -fx-background-color: green;
+}
+.check-box > .box{
+    -fx-background-color:transparent;
+    -fx-border-width: 1;
+    -fx-border-color: #f2f2f2;
+    -fx-border-radius: 5px
+}
+.check-box .mark{
+    -fx-background-insets: 1 0 -1 0 0;
+}
+.check-box:indeterminate .mark{
+    -fx-background-color:#2a2b2a;
+    -fx-mark-highlight-color:395cab;
+    -fx-scale-shape:true;
+}
+
+.check-box:selected .mark{
+    -fx-background-color:#f2f2f2;
+    -fx-mark-highight-color:#5a61af;
+}
