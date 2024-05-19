@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package controller;
+package view;
 
 import java.io.IOException;
 import java.net.URL;
@@ -45,10 +45,10 @@ public class SceneController implements Initializable {
     private Button newBTN;
     @FXML
     private Button openBTN;
-    @FXML
-    private Button genreBTN;
     
     private Stage stage;
+    @FXML
+    private Button tagBTN;
 
     /**
      * Initializes the controller class.
@@ -67,7 +67,6 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML
     private void onGenreView(ActionEvent event) {
         try {
             changeFXML("/view/Genre.fxml");
@@ -130,5 +129,9 @@ public class SceneController implements Initializable {
 
     @FXML
     private void onOpenProject(ActionEvent event) {
+    }
+
+    @FXML
+    private void onTagView(ActionEvent event) {
     }
 }

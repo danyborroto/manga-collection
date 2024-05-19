@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
    <children>
       <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,7 +21,7 @@
                   <VBox fx:id="leftMenu" maxWidth="-Infinity" prefHeight="353.0" prefWidth="126.0" stylesheets="@../resources/style.css" HBox.hgrow="ALWAYS">
                      <children>
                         <Button fx:id="mangaBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMangaView" prefHeight="36.0" prefWidth="126.0" text="Manga" />
-                        <Button fx:id="genreBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGenreView" prefHeight="36.0" prefWidth="126.0" text="Genre" />
+                        <Button fx:id="tagBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTagView" prefHeight="36.0" prefWidth="126.0" text="Tag" />
                         <Button fx:id="authorBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAuthorView" prefHeight="36.0" prefWidth="126.0" text="Author" />
                         <Button fx:id="serieBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSerieView" prefHeight="36.0" prefWidth="126.0" text="Serie" />
                         <Button fx:id="settingBTN" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSettingView" prefHeight="36.0" prefWidth="126.0" text="Settings" />
